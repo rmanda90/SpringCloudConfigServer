@@ -1,0 +1,27 @@
+message: Message from application.yml.
+SPRING_DATASOURCE_URL: jdbc:mysql://${MYSQL_HOST:localhost}:3306/schooldb
+SPRING_DATASOURCE_USERNAME: root
+SPRING_DATASOURCE_PASSWORD: password1
+SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.jdbc.batch_size: 20
+      hibernate.cache.use_query_cache: false
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_structured_entries: false
+      hibernate.cache.use_minimal_puts: false
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driverClassName: ${SPRING_DATASOURCE_DRIVER_CLASS_NAME}
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
