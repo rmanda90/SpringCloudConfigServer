@@ -1,0 +1,10 @@
+message: Message from discovery-server-dev.yml.
+
+eureka:
+  client:
+    eurekaServerConnectTimeoutSeconds: 5
+    enabled: true
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
